@@ -201,15 +201,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
 
-
-.banner {
-  margin-top: 0;
-  padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px); /* Subtract navbar height from viewport height */
+  padding-top: 100px; /* Add padding top to make space for the fixed navbar */
 }
+
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;

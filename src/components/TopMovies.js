@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const TopMovies = () => {
   const [topMovies, setTopMovies] = useState([]);
@@ -19,9 +20,16 @@ const TopMovies = () => {
 
   return (
     <div>
+      <b>Top 5 Movies</b>
+      <br></br>
+      <br></br>
       <ul>
         {topMovies.map((movie) => (
-          <li key={movie.id}>{movie.title}</li>
+          <li key={movie.film_id}>
+            <Link to={`/moreInfo/${movie.film_id}`} style={{ color: "white" }}>
+              {movie.title}
+            </Link>
+          </li>
         ))}
       </ul>
     </div>
