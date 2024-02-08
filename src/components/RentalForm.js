@@ -12,6 +12,7 @@ function RentalForm() {
     // Handle form submission, e.g., send data to server
     console.log("Form submitted:", {
       rentalId,
+      rentDate,
       customerId,
       staffId,
       lastUpdate,
