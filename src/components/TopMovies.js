@@ -26,7 +26,11 @@ const TopMovies = () => {
       <ul>
         {topMovies.map((movie) => (
           <li key={movie.film_id}>
-            <Link to={`/moreInfo/${movie.film_id}`} style={{ color: "white" }}>
+            <Link
+              to="/moreInfo"
+              state={movie.film_id}
+              style={{ color: "white" }}
+            >
               {movie.title}
             </Link>
           </li>

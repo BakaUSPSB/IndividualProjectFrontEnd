@@ -203,11 +203,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .main-content {
   display: flex;
+  flex-direction: column; /* Change flex direction to column */
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 100px); /* Subtract navbar height from viewport height */
-  padding-top: 100px; /* Add padding top to make space for the fixed navbar */
+  padding-top: 20px; /* Add padding top to make space for the fixed navbar */
 }
+
+
+
 
 .banner .tagline {
   font-weight: 700;
