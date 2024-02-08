@@ -211,7 +211,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
-
+mark {
+  background-color: grey;
+  color: black;
+}
 
 .banner .tagline {
   font-weight: 700;
