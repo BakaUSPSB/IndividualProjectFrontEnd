@@ -1,21 +1,16 @@
 import React, { useState } from "react";
 
 function RentalForm() {
-  const [rentalId, setRentalId] = useState("");
-  const [rentDate, setRentDate] = useState(new Date().toISOString());
+  const [filmId, setFilmId] = useState("");
   const [customerId, setCustomerId] = useState("");
   const [staffId, setStaffId] = useState("");
-  const [lastUpdate, setLastUpdate] = useState(new Date().toISOString());
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission, e.g., send data to server
     console.log("Form submitted:", {
-      rentalId,
-      rentDate,
+      filmId,
       customerId,
       staffId,
-      lastUpdate,
     });
   };
 
@@ -24,22 +19,14 @@ function RentalForm() {
       <h2>Rental Form</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Rental ID:
+          Film ID:
           <input
             type="text"
-            value={rentalId}
-            onChange={(e) => setRentalId(e.target.value)}
+            value={filmId}
+            onChange={(e) => setFilmId(e.target.value)}
           />
         </label>
         <label>
-          <label>
-            Rent Date:
-            <input
-              type="text"
-              value={rentDate}
-              onChange={(e) => setRentDate(e.target.value)}
-            />
-          </label>
           Customer ID:
           <input
             type="text"
@@ -53,14 +40,6 @@ function RentalForm() {
             type="text"
             value={staffId}
             onChange={(e) => setStaffId(e.target.value)}
-          />
-        </label>
-        <label>
-          Last Update:
-          <input
-            type="text"
-            value={lastUpdate}
-            onChange={(e) => setLastUpdate(e.target.value)}
           />
         </label>
         <button type="submit">Submit</button>
